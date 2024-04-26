@@ -70,14 +70,14 @@ io.on("connection", (socket) => {
     // le paso el token del usuario como parametro
     // TODO: CAMBIAR A LA URL DE MI API
     const responseUser = await axios.get(
-      "http://104.155.138.16:80/api/user/" + name
+      "http://104.155.138.16/api/user/" + name
     );
 
     // consumir el endpoint para obtener la el proyecto por su codigo/llave
     // le paso el codigo de la sala
     // TODO: CAMBIAR A LA URL DE MI API
     const responseProject = await axios.get(
-      "http://104.155.138.16:80/api/cargar-diagrama/" + room
+      "http://104.155.138.16/api/cargar-diagrama/" + room
     );
 
     if (
@@ -130,7 +130,7 @@ io.on("connection", (socket) => {
       };
       // TODO: CAMBIAR A LA URL DE MI API
       const response = await axios.put(
-        "http://104.155.138.16:80/api/guardar-diagrama/" + data.room,
+        "http://104.155.138.16/api/guardar-diagrama/" + data.room,
         body
       );
     }
